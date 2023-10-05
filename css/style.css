@@ -1529,7 +1529,14 @@ body {
   --ac-min-vw: 1200;
   --ac-max-height: 434;
   --ac-min-height: 338;
-  --ac-height: calc((var(--ac-max-height) * 1px) - ((var(--ac-max-height) - var(--ac-min-height)) * (100vw - var(--ac-min-vw) * 1px) / (var(--ac-max-vw) - var(--ac-min-vw))));
+  --ac-height: calc(
+    (var(--ac-max-height) * 1px) -
+      (
+        (var(--ac-max-height) - var(--ac-min-height)) *
+          (100vw - var(--ac-min-vw) * 1px) /
+          (var(--ac-max-vw) - var(--ac-min-vw))
+      )
+  );
   flex-direction: column;
   align-content: space-between;
   padding: 25px 0;
